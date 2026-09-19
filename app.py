@@ -1,14 +1,6 @@
 import random
 import streamlit as st
-
-def get_range_for_difficulty(difficulty: str):
-    if difficulty == "Easy":
-        return 1, 20
-    if difficulty == "Normal":
-        return 1, 100
-    if difficulty == "Hard":
-        return 1, 50
-    return 1, 100
+from logic_utils import check_guess, get_range_for_difficulty
 
 
 def parse_guess(raw: str):
@@ -27,24 +19,6 @@ def parse_guess(raw: str):
         return False, None, "That is not a number."
 
     return True, value, None
-
-
-def check_guess(guess, secret):
-    if guess == secret:
-        return "Win", "🎉 Correct!"
-
-    try:
-        if guess > secret:
-            return "Too High", "📈 Go HIGHER!"
-        else:
-            return "Too Low", "📉 Go LOWER!"
-    except TypeError:
-        g = str(guess)
-        if g == secret:
-            return "Win", "🎉 Correct!"
-        if g > secret:
-            return "Too High", "📈 Go HIGHER!"
-        return "Too Low", "📉 Go LOWER!"
 
 
 def update_score(current_score: int, outcome: str, attempt_number: int):
@@ -89,12 +63,24 @@ low, high = get_range_for_difficulty(difficulty)
 st.sidebar.caption(f"Range: {low} to {high}")
 st.sidebar.caption(f"Attempts allowed: {attempt_limit}")
 
-if "secret" not in st.session_state:
+if (
+    "secret" not in st.session_state
+    or st.session_state.get("secret_difficulty") != difficulty
+):
     st.session_state.secret = random.randint(low, high)
+    st.session_state.secret_difficulty = difficulty
+    st.session_state.attempts = 0
+    st.session_state.score = 0
+    st.session_state.status = "playing"
+    st.session_state.history = []
 
 if "attempts" not in st.session_state:
     st.session_state.attempts = 1
-
+# FIX: Used AI assistance to reset the secret when the selected difficulty changes.
+if (
+    "secret" not in st.session_state
+    or st.session_state.get("secret_difficulty") != difficulty
+):
 if "score" not in st.session_state:
     st.session_state.score = 0
 
@@ -107,7 +93,7 @@ if "history" not in st.session_state:
 st.subheader("Make a guess")
 
 st.info(
-    f"Guess a number between 1 and 100. "
+    f"Guess a number between {low} and {high}. "
     f"Attempts left: {attempt_limit - st.session_state.attempts}"
 )
 
@@ -130,10 +116,11 @@ with col2:
     new_game = st.button("New Game 🔁")
 with col3:
     show_hint = st.checkbox("Show hint", value=True)
-
+# FIX: Used AI assistance so New Game generates a secret within the selected range.
 if new_game:
     st.session_state.attempts = 0
-    st.session_state.secret = random.randint(1, 100)
+    st.session_state.secret = random.randint(low, high)
+    st.session_state.secret_difficulty = difficulty
     st.success("New game started.")
     st.rerun()
 
