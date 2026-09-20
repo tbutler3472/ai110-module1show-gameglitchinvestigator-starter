@@ -47,21 +47,22 @@ Identify three potential edge cases for my number guessing game and create pytes
 
 > Document your use of AI for linting or code style improvements.
 
-**Prompt used:**
+**Prompt used: 
 
 ```
-<!-- Paste the prompt you gave the AI -->
-```
+Review `logic_utils.py` and add professional docstrings to every function without changing how any of the functions work. Then review the file for PEP 8 style issues, including formatting and naming. Apply any appropriate PEP 8 fixes without changing the program's behavior. Afterward, tell me exactly what changes you made and provide the linting/style-check output so I can document it in `ai_interactions.md`.
 
 **Linting output before:**
 
 ```
-<!-- Paste relevant linter warnings/errors -->
+pycodestyle found 3 PEP 8 issues:
+- 2 overlong FIX comments
+- 1 missing blank line before check_guess
 ```
 
 **Changes applied:**
 
-<!-- Describe what you changed based on the AI's suggestions -->
+The AI fixed the two comments that were too long by splitting them into multiple lines and added the missing spacing before the check_guess function. It also added more detailed docstrings to all four functions in logic_utils.py. After the changes the pycodestyle check passed with no output and all 7 pytest tests passed.
 
 ---
 
