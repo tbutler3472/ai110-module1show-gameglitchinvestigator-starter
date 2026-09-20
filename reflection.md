@@ -14,9 +14,9 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-Easy mode inputed 1 as my guess| It would tell me to go higher or my guess was right because 1 was the lowest in the 1-20 range| Hint showed the number was 72 outside the range|none 
-Hard mode guessed 4 when the secret number was 90| Expected the game would told me to go higher since i was way off| Game told me to go lower instead|none 
-Selected Hard Mode| That the hard mode would have the biggest range| Normal had the biggest range from 1-100 and hard had 1-50 when hard suppose to be most challenging mode|none
+|Easy mode inputed 1 as my guess| It would tell me to go higher or my guess was right because 1 was the lowest in the 1-20 range| Hint showed the number was 72 outside the range|none 
+|Hard mode guessed 4 when the secret number was 90| Expected the game would told me to go higher since i was way off| Game told me to go lower instead|none 
+|Selected Hard Mode| That the hard mode would have the biggest range| Normal had the biggest range from 1-100 and hard had 1-50 when hard suppose to be most challenging mode|none
 
 ---
 
@@ -25,7 +25,7 @@ Selected Hard Mode| That the hard mode would have the biggest range| Normal had 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
 I used chat gpt outside of vs code to help with instructions and organization and then used co pilot in vs code to make the changes to the actual code and sugestions. 
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
-One example of a correct suggestion AI gave me was that the higher and lower hint messages were reversed and it correctly suggested to move the check guess logic into logic utilis. To verify this was correct I ran the py test after all the changes were implemented and all 4 test passed. I also checked the game and the logic was fixed and it now told me to go higher when my guess was to low instead of saying go lower. 
+One example of a correct suggestion AI gave me was that the higher and lower hint messages were reversed and it correctly suggested to move the check guess logic into logic utilis. To verify this was correct I ran the py test after all the changes were implemented and all 7 test passed. I also checked the game and the logic was fixed and it now told me to go higher when my guess was to low instead of saying go lower. 
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 One suggestion that was misleading was that it said I needed to change the test before I ran them. So when it suggested it and i ran the py test it failed 3 of 4 of the test so in order to fix it I had the AI update the old test so that it would match the check guess function that was already returned and I ran the py test after the changes and then all 4 of the test passed. 
 

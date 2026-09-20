@@ -10,22 +10,24 @@
 
 **What task did you give the agent?**
 
-<!-- Describe the goal you asked the agent to accomplish -->
+I asked the AI agent to add a Guess History feature to the game so it could keep track of the guesses the user made. I also wanted the history to reset when a new game started or when the difficulty was changed.
 
 **What did the agent do?**
 
-<!-- List the steps the agent took (files edited, commands run, etc.) -->
+The agent changed the app.py file and added the Guess History to the sidebar. It makes it so only valid number guesses were added to the history and then when the a input is  invalid it won't be added. It also made the guess history reset when I started a new game or changed the difficulty.
 
 **What did you have to verify or fix manually?**
 
-<!-- Describe anything the agent got wrong or that required human review -->
+I manually ran the game to make sure the Guess History actually worked. I entered multiple number guesses and made sure they showed up in the history. And saw on the side after every new guess the previous guess would show up with a number beside it with the guess number as well. I also made sure entering something that wasn't a number like a word wouldn't count as a guess. 
+
+Files modified: The agent modified app.py to add the Guess History feature. No changes were needed to logic_utils.py or tests/test_game_logic.py.
 
 ---
 
 ## Test Generation (SF7)
 
 > Document how you used AI to help generate or improve tests.
- ### Prompt Used
+ Prompt Used:
 
 Identify three potential edge cases for my number guessing game and create pytest tests for them. Make sure the tests verify that the game handles the edge cases correctly.
 

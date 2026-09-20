@@ -51,9 +51,14 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 ## 🧪 Test Results
 
 ```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+============================= test session starts =============================
+platform win32 -- Python 3.13.1, pytest-9.1.1, pluggy-1.6.0
+plugins: anyio-4.13.0
+collected 7 items
+
+tests\test_game_logic.py .......                                      [100%]
+
+============================== 7 passed in 0.14s ==============================
 ```
 
 ## 🚀 Stretch Features

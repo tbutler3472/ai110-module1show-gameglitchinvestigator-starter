@@ -76,11 +76,6 @@ if (
 
 if "attempts" not in st.session_state:
     st.session_state.attempts = 1
-# FIX: Used AI assistance to reset the secret when the selected difficulty changes.
-if (
-    "secret" not in st.session_state
-    or st.session_state.get("secret_difficulty") != difficulty
-):
 if "score" not in st.session_state:
     st.session_state.score = 0
 
@@ -89,6 +84,12 @@ if "status" not in st.session_state:
 
 if "history" not in st.session_state:
     st.session_state.history = []
+
+st.sidebar.subheader("Guess History")
+if st.session_state.history:
+    st.sidebar.write(st.session_state.history)
+else:
+    st.sidebar.caption("No valid guesses yet.")
 
 st.subheader("Make a guess")
 
@@ -121,6 +122,7 @@ if new_game:
     st.session_state.attempts = 0
     st.session_state.secret = random.randint(low, high)
     st.session_state.secret_difficulty = difficulty
+    st.session_state.history = []
     st.success("New game started.")
     st.rerun()
 
@@ -137,7 +139,6 @@ if submit:
     ok, guess_int, err = parse_guess(raw_guess)
 
     if not ok:
-        st.session_state.history.append(raw_guess)
         st.error(err)
     else:
         st.session_state.history.append(guess_int)
