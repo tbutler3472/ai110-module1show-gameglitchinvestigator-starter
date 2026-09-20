@@ -150,6 +150,16 @@ if submit:
 
         outcome, message = check_guess(guess_int, secret)
 
+        distance = abs(guess_int - st.session_state.secret)
+        range_size = high - low
+        if distance <= range_size * 0.1:
+            temperature = "🔥 Hot"
+        elif distance <= range_size * 0.25:
+            temperature = "🌡️ Warm"
+        else:
+            temperature = "❄️ Cold"
+        st.info(f"Guess temperature: {temperature}")
+
         if show_hint:
             st.warning(message)
 

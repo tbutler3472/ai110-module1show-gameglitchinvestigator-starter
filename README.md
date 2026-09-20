@@ -63,4 +63,8 @@ tests\test_game_logic.py .......                                      [100%]
 
 ## 🚀 Stretch Features
 
-- [ ] [If you choose to complete Challenge 4, describe the Enhanced UI changes here — a screenshot is optional]
+## Enhanced Game UI
+
+I added a Hot/Warm/Cold feature that tells the player how close their guess is to the secret number. If the guess is really close it will say  Hot, if it is somewhat close it will say  Warm, and if it is far away it will say  Cold.
+
+I added this to `app.py` where the game checks the player's guess. This didn't change any of the original game logic and the higher/lower hints, score, difficulty, and Guess History still work the same.
