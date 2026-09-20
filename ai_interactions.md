@@ -68,19 +68,21 @@ The AI fixed the two comments that were too long by splitting them into multiple
 
 ## Model Comparison (SF11)
 
+# Model Comparison (SF11)
+
 > Compare two AI models on the same task.
 
 **Task given to both models:**
 
-<!-- Describe what you asked each model to do -->
+I asked both models to help fix the higher and lower hint bug in my number guessing game and explain why the fix would work.
 
 | | Model A | Model B |
 |-|---------|---------|
-| **Model name** | | |
-| **Response summary** | | |
-| **More Pythonic?** | | |
-| **Clearer explanation?** | | |
+| Model name | ChatGPT | Copilot |
+| Response summary | Gave me the fix directly and explained what needed to be changed with the higher and lower hints. | Gave me a fix but also tried to make changes to my files and run tests that I didn't ask it to do. |
+| **More Pythonic?** | Yes | No |
+| **Clearer explanation?** | Yes | No |
 
 **Which did you prefer and why?**
 
-<!-- Your conclusion -->
+I preferred ChatGPT because it gave me what I asked for directly and was easier for me to understand. Copilot still gave me a fix but it did extra stuff like trying to change my files and run tests when I was only asking it to show me the fix. And I had to prompt it a couple different times because it kept trying to make chnanges to the code that I never asked for. 
