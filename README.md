@@ -25,19 +25,26 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+ The game's purpose is to guess a randomly generated secret number while using higher and lower hints to find the correct answer.
+
+ The bugs I found were reversed higher/lower hints, the secret number not matching the selected difficulty range, and the game not resetting correctly when changing difficulty.
+
+I fixed the hint logic, made the secret number follow the selected difficulty range, and fixed the game so it properly updates when the difficulty changes.
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+## Demo Walkthrough
+
+1. User selects a difficulty level for the game.
+2. The game generates a secret number based on the selected difficulty range.
+3. User enters a guess that is lower than the secret number.
+4. The game returns "Too Low" and tells the user to go higher.
+5. User enters a guess that is higher than the secret number.
+6. The game returns "Too High" and tells the user to go lower.
+7. The user continues guessing until they enter the correct secret number.
+8. The game tells the user that their guess is correct and shows their final result.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 

@@ -25,12 +25,19 @@
 ## Test Generation (SF7)
 
 > Document how you used AI to help generate or improve tests.
+ ### Prompt Used
+
+Identify three potential edge cases for my number guessing game and create pytest tests for them. Make sure the tests verify that the game handles the edge cases correctly.
 
 | Edge Case | Prompt Used | AI-Suggested Test | Did It Pass? | Your Reasoning |
 |-----------|-------------|-------------------|--------------|----------------|
-| | | | | |
-| | | | | |
-| | | | | |
+| Edge Case | Prompt Used | AI-Suggested Test | Did It Pass? | Your Reasoning |
+|------------|-------------|-------------------|--------------|----------------|
+| Edge Case | Prompt Used | AI-Suggested Test | Did It Pass? | Your Reasoning |
+|------------|-------------|-------------------|--------------|----------------|
+| Boundary exact match | Identify three edge cases for my game and make pytest tests for them. | Test the lowest and highest numbers in the range. | Yes | I chose this to make sure the game still works correctly at the lowest and highest numbers. |
+| Extreme comparison hints | Identify three edge cases for my game and make pytest tests for them. | Test guesses that are really far from the secret number. | Yes | I chose this to make sure the higher and lower hints still work when the guess is far away from the secret number. |
+| Near-boundary guesses | Identify three edge cases for my game and make pytest tests for them. | Test guesses that are one number away from the secret number. | Yes | I chose this to make sure the game still gives the right hint when the guess is really close to the secret number. ||
 
 ---
 

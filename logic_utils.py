@@ -20,9 +20,10 @@ def parse_guess(raw: str):
 
 # FIX: Used AI assistance to refactor check_guess and correct the reversed higher/lower hints.
 def check_guess(guess, secret):
+    """
     Compare guess to secret and return (outcome, message).
 
-    outcome examples: "Win", "Too High", "Too Low"
+    Outcome examples: "Win", "Too High", "Too Low"
     """
     if guess == secret:
         return "Win", "🎉 Correct!"

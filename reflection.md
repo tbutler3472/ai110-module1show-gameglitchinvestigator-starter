@@ -49,11 +49,15 @@ Yes, AI helped me design the test for the higher lower bug. I was struggling to 
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 
+I would explain as simple as I could say Streamlit is what runs and displays the dahsboard for the game. When the user interacts dashboard though thats when streamlit re runs the code in order to update the app. While the session state saves information like for example the secret number, score and the attempts so when the code re runs the information is not lost. 
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
+One habit I want to reuse in future labs and projects is instead of assuming the code I get from AI automatically works making sure i test it and make sure it's actually doing what I want it to do instead of assuming it does. Another thing would also be giving more specific details when I prompt the AI as well.  
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
+I think one thing i would differently would be not only reviewing the changes but also instead of relying on one AI for everything like Chat GPT branch out more and look at different outputs that be generated from like Claude, Co Pilot, and Google Gemni. 
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+This project changed the way I think about AI code because it made me more aware of the mistakes AI can do with code or even not fully give what you ask for originally. It also made me realize how important learning how to ask and prompt is and the language and directions you give to the AI. 
